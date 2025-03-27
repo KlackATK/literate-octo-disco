@@ -1,0 +1,208 @@
+/*----- Start Custom Properties -----*/
+	:root {
+		/* colors */
+		--clr-grn: 21, 238, 21; /* #15ee15 */
+		--clr-ylw: 238, 238, 21; /* #eeee15 */
+		--clr-red: 238, 21, 21; /* #ee1515 */
+		--clr-wht: 255, 255, 255; /* #ffffff */
+		--clr-blk: 36, 36, 36; /* #242424 */
+		--clr-poke: 237, 83, 58; /* #ed523a  */
+		--clr-lux-blk: 51, 51, 51; /* #333333 */
+		--clr-lux-gold: 236, 187, 74; /* #ecbb4a */
+		
+		--clr-normal: 159, 161, 159;
+		--clr-grass: 63, 161, 41;
+		--clr-fire: 230, 40, 41;
+		--clr-water: 41, 128, 239;
+		--clr-electric: 250, 192, 0;
+		--clr-bug: 145, 161, 25;
+		--clr-flying: 129, 185, 239;
+		--clr-rock: 175, 169, 129;
+		--clr-ground: 145, 81, 33;
+		--clr-fighting: 255, 128, 0;
+		--clr-psychic: 239, 65, 121;
+		--clr-poison: 145, 65, 203;
+		--clr-ghost: 112, 65, 112;
+		--clr-dragon: 80, 96, 225;
+		--clr-ice: 61, 206, 243;
+		--clr-dark: 98, 77, 78;
+		--clr-steel: 96, 161, 184;
+		--clr-fairy: 239, 112, 239;
+		
+		/* font sizes */
+		--fs-900: 9.375rem;
+		--fs-800: 6.25rem;
+		--fs-700: 3.5rem;
+		--fs-600: 2rem;
+		--fs-500: 1.75rem;
+		--fs-400: 1.125rem;
+		--fs-300: 1rem;
+		--fs-200: 0.875rem;
+		
+		/* font families */
+		--ff-serif: "Baskerville", serif;
+		--ff-sans-cond: "Roboto Condensed", sans-serif;
+		--ff-sans-reg: "Roboto", sans-serif;
+		
+	}
+/*----- End Custom Properties -----*/
+
+/*----- General Utility Classes -----*/
+
+/* "* + *" <-- denotes a selector check, selecting anything that has a sibling element before itself */
+/* Will not work on the first element in a group, including lone elements.*/
+.flow > * + * {
+	margin-top: var(--flow-space, 1rem);
+	outline: 1px solid red;
+}
+
+/* flexbox class */
+.flex {
+	display: flex;
+	gap: var(--gap, 1rem);
+}
+
+/* gridbox class */
+.grid {
+	display: grid;
+	gap: var(--gap, 1rem);
+}
+
+/* container class */
+.container {
+	padding-inline: 2em;
+	margin-inline: auto;
+	max-width: 80rem;
+}
+
+/* class for screen-reader/accessability*/
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+/*----- End Utility Classes -----*/
+
+
+/*----- Begin Reset -----*/
+
+/* including padding & margins in measurements */
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+/* resetting margins */
+body, h1, h2, h3, h4, h5, h6, p, figure, picture {
+	margin: 0;
+}
+
+/* removing bold from headers */
+h1, h2, h3, h4, h5, h6, p {
+	font-weight: 400;
+}
+
+/* setting defaults for body */
+body {
+	font-family: var(--ff-sans-reg);
+	font-size: var( --fs-400);
+	background-color: rgb( var(--clr-wht));
+	color: rgb( var(--clr-dkgrn));
+	line-height: 1.5;
+	min-height: 100vh;
+}
+
+/* making images dynamic */
+img, picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* making form elements cohesive with content */
+input, button, textarea, select {
+	font: inherit;
+}
+
+/* reduce animations option */
+@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/*----- End Reset -----*/
+
+/*----- Start Custom Colors -----*/
+.bg-ltgrn { background-color: rgb( var(--clr-ltgrn) ); }
+.bg-grn { background-color: rgb( var(--clr-grn) ); }
+.bg-dkgrn { background-color: rgb( var(--clr-dkgrn) ); }
+.bg-ylw { background-color: rgb( var(--clr-ylw) ); }
+.bg-red { background-color: rgb( var(--clr-red) ); }
+.bg-wht { background-color: rgb( var(--clr-wht) ); }
+.bg-blk { background-color: rgb( var(--clr-blk) ); }
+
+.bg-normal { background-color:rgb( var(--clr-normal) ); }
+.bg-grass { background-color:rgb( var(--clr-grass) ); }
+.bg-fire { background-color:rgb( var(--clr-fire) ); }
+.bg-water { background-color:rgb( var(--clr-water) ); }
+.bg-electric { background-color:rgb( var(--clr-electric) ); }
+.bg-bug { background-color:rgb( var(--clr-bug) ); }
+.bg-flying { background-color:rgb( var(--clr-flying) ); }
+.bg-rock { background-color:rgb( var(--clr-rock) ); }
+.bg-ground { background-color:rgb( var(--clr-ground) ); }
+.bg-fighting { background-color:rgb( var(--clr-fighting) ); }
+.bg-psychic { background-color:rgb( var(--clr-psychic) ); }
+.bg-poison { background-color:rgb( var(--clr-poison) ); }
+.bg-ghost { background-color:rgb( var(--clr-ghost) ); }
+.bg-dragon { background-color:rgb( var(--clr-dragon) ); }
+.bg-ice { background-color:rgb( var(--clr-ice) ); }
+.bg-dark { background-color:rgb( var(--clr-dark) ); }
+.bg-steel { background-color:rgb( var(--clr-steel) ); }
+.bg-fairy { background-color:rgb( var(--clr-fairy) ); }
+
+.font-wht { color: rgb( var(--clr-wht) ); }
+.font-blk { color: rgb( var(--clr-blk) ); }
+/*----- End Custom Colors -----*/
+
+.type-cell {
+	height:2rem;
+	width:2rem;
+	border: 1px solid black;
+}
+
+.type-h-header {
+	height: 2rem;
+	width: 6rem;
+	border: 1px solid black;
+	text-align: center;
+	color: rgb( var(--clr-wht) );
+}
+.type-v-header {
+	height:6rem;
+	width:2rem;
+	border: 1px solid black;
+	writing-mode: vertical-lr;
+	text-orientation: mixed;
+	transform: rotate(180deg);
+	text-align:center;
+	color: rgb( var(--clr-wht) );
+}
+.type-corner {
+	height:6rem;
+	width:6rem;
+}
+.row {
+	display: flex;
+}
+
+.uppercase { text-transform: uppercase; }
