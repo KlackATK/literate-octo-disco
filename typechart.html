@@ -6,17 +6,17 @@
 		<script src="https://kit.fontawesome.com/d30d61dcd4.js" crossorigin="anonymous"></script>
 	</head>
 
-	<body>
+	<body class="light-mode">
 		<!-- Type order: Normal, Grass, Fire, Water, Electric, Bug, Flying, Rock, Ground, Fighting, Psychic, Dark, Ghost, Ice, Steel, Poison, Dragon, Fairy, -->
-		<div id="theme" class="light-mode">	
-			<div id="band-1" style="height:10rem;">
-				<div class="ld-toggle">
-					<i class="fa-solid fa-moon fa-2xl"></i>
+		<div id="header">	
+			<div id="stripe1" style="height:10rem;">
+				<div id="ld-toggle" class="ld-toggle" onClick="themeToggle()">
+					<i class="fa-solid fa-moon fa-4x" ></i>
 				</div>
 			</div>
-			<div id="band-2" style="height:1rem;">			</div>
-			<div id="band-3" style="height:3rem;">			</div>
-			<div id="band-4" style="height:1rem;">			</div>
+			<div id="stripe2" style="height:1rem;">			</div>
+			<div id="stripe3" style="height:3rem;">			</div>
+			<div id="stripe4" style="height:1rem;">			</div>
 		</div>
 			
 		<div class="container" style="display:grid; justify-content:center; padding-top:5rem;">
@@ -422,7 +422,7 @@
 			
 		</div>
 
-		<button type="button" onClick="themeToggle()">Toggle Theme</button>
+		<button type="button" onClick="toggleNormal()">Toggle Theme</button>
 		<div id="theme" style="height:10rem;"></div>
 
 	</body>

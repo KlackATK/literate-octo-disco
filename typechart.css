@@ -224,21 +224,22 @@ input, button, textarea, select {
 .ld-toggle > .i {
 	align-self: center;
 	justify-content:center;
+	background-color: rgb( var(--clr-wht));
 }
 
 .uppercase { text-transform: uppercase; }
 
-.dm-top { background-color: rgb( var(--clr-lux-blk)); }
-.dm-b1 { background-color: rgb( var(--clr-lux-gold)); }
-.dm-b2 { background-color: rgb( var(--clr-poke)); }
+.light-mode > #header > #stripe1 { background-color: rgb( var(--clr-poke)); }
+.light-mode > #header > #stripe2 { background-color: rgb( var(--clr-blk)); }
+.light-mode > #header > #stripe3 { background-color: rgb( var(--clr-blk)); }
+.light-mode > #header > #stripe4 { background-color: rgb( var(--clr-blk)); }
 
-.light-mode > #band-1 { background-color: rgb( var(--clr-poke)); }
-.light-mode > #band-2 { background-color: rgb( var(--clr-blk)); }
-.light-mode > #band-3 { background-color: rgb( var(--clr-blk)); }
-.light-mode > #band-4 { background-color: rgb( var(--clr-blk)); }
+.dark-mode > #header > #stripe1 { background-color: rgb( var(--clr-lux-blk)); }
+.dark-mode > #header > #stripe2 { background-color: rgb( var(--clr-lux-gold)); }
+.dark-mode > #header > #stripe3 { background-color: rgb( var(--clr-poke)); }
+.dark-mode > #header > #stripe4 { background-color: rgb( var(--clr-lux-gold)); }
 
-.dark-mode > #band-1 { background-color: rgb( var(--clr-lux-blk)); }
-.dark-mode > #band-2 { background-color: rgb( var(--clr-lux-gold)); }
-.dark-mode > #band-3 { background-color: rgb( var(--clr-poke)); }
-.dark-mode > #band-4 { background-color: rgb( var(--clr-lux-gold)); }
+body.dark-mode {
+	background-color: rgb( var(--clr-lux-blk));
+}
 
