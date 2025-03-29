@@ -219,20 +219,23 @@ input, button, textarea, select {
 	margin-top: 2.5rem;
 	margin-right: 2.5rem;
 	padding: auto;
+	border: 2px solid #ccc;
+	border-radius: 0.5rem;
+	text-align: center;
 }
 
 .ld-toggle > .i {
-	align-self: center;
+	text-align: center;
 	justify-content:center;
 	background-color: rgb( var(--clr-wht));
 }
 
 .uppercase { text-transform: uppercase; }
 
-.light-mode > #header > #stripe1 { background-color: rgb( var(--clr-poke)); }
-.light-mode > #header > #stripe2 { background-color: rgb( var(--clr-blk)); }
-.light-mode > #header > #stripe3 { background-color: rgb( var(--clr-blk)); }
-.light-mode > #header > #stripe4 { background-color: rgb( var(--clr-blk)); }
+#header > #stripe1 { background-color: rgb( var(--clr-poke)); }
+#header > #stripe2 { background-color: rgb( var(--clr-blk)); }
+#header > #stripe3 { background-color: rgb( var(--clr-blk)); }
+#header > #stripe4 { background-color: rgb( var(--clr-blk)); }
 
 .dark-mode > #header > #stripe1 { background-color: rgb( var(--clr-lux-blk)); }
 .dark-mode > #header > #stripe2 { background-color: rgb( var(--clr-lux-gold)); }
@@ -241,5 +244,6 @@ input, button, textarea, select {
 
 body.dark-mode {
 	background-color: rgb( var(--clr-lux-blk));
+	color: rgb( var(--clr-wht));
 }
 
